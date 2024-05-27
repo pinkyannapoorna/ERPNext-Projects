@@ -1,6 +1,6 @@
 ### Library Management System
 
-Book keeping store
+Book Keeping
 
 ### Installation
 
