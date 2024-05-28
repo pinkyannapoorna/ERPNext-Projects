@@ -1,6 +1,6 @@
-### Library Management System
+### LMS
 
-Book Keeping
+LMS
 
 ### Installation
 
