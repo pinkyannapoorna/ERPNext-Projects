@@ -1,7 +1,7 @@
 app_name = "library_management_system"
-app_title = "LMS"
-app_publisher = "LMS"
-app_description = "LMS"
+app_title = "lms"
+app_publisher = "lms"
+app_description = "lms"
 app_email = "a@gmail.com"
 app_license = "mit"
 # required_apps = []

@@ -1,6 +1,6 @@
-### LMS
+### lms
 
-LMS
+lms
 
 ### Installation
 
