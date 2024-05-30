@@ -1,0 +1,58 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-29 13:45:20.656418",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "loan_period",
+  "max_articles"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "loan_period",
+   "fieldtype": "Int",
+   "label": "Loan Period"
+  },
+  {
+   "default": "0",
+   "fieldname": "max_articles",
+   "fieldtype": "Int",
+   "label": "Maximum Number of Issued Articles"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-05-29 17:16:43.958781",
+ "modified_by": "Administrator",
+ "module": "lms",
+ "name": "Library Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Librarian",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

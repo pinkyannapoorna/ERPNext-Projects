@@ -1,0 +1,137 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:naming_series",
+ "creation": "2024-05-28 22:30:10.667828",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "library_transaction_details_section",
+  "article",
+  "library_member",
+  "naming_series",
+  "library_member_name",
+  "library_transaction_issued_id",
+  "column_break_mmyn",
+  "date",
+  "type",
+  "amended_from",
+  "active"
+ ],
+ "fields": [
+  {
+   "fieldname": "library_transaction_details_section",
+   "fieldtype": "Section Break",
+   "label": "Library Transaction Details"
+  },
+  {
+   "fieldname": "article",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Article",
+   "options": "Article",
+   "reqd": 1
+  },
+  {
+   "fieldname": "library_member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Library Member",
+   "options": "Library Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "ID",
+   "options": "LT-.YYYY.-"
+  },
+  {
+   "fieldname": "column_break_mmyn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Library Transaction",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Issue",
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nIssue\nReturn"
+  },
+  {
+   "fetch_from": "library_member.full_name",
+   "fieldname": "library_member_name",
+   "fieldtype": "Data",
+   "label": "Library Member Name"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Transaction Date"
+  },
+  {
+   "depends_on": "eval:doc.type === 'Return'",
+   "fieldname": "library_transaction_issued_id",
+   "fieldtype": "Link",
+   "label": "Library Transaction Issued ID",
+   "mandatory_depends_on": "eval:doc.type === 'Return'",
+   "options": "Library Transaction"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-05-29 21:57:30.620414",
+ "modified_by": "Administrator",
+ "module": "lms",
+ "name": "Library Transaction",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Librarian",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,156 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_rename": 1,
+ "autoname": "field:article_name",
+ "creation": "2024-05-28 19:05:08.819577",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "article_details_section",
+  "article_name",
+  "publisher",
+  "author",
+  "author_name",
+  "image",
+  "total_no_of_articles_available",
+  "column_break_rpsj",
+  "isbn",
+  "status",
+  "description",
+  "issued_articles",
+  "web_page_settings_tab",
+  "route",
+  "published"
+ ],
+ "fields": [
+  {
+   "fieldname": "article_details_section",
+   "fieldtype": "Section Break",
+   "label": "Article Details"
+  },
+  {
+   "fieldname": "article_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Article Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "publisher",
+   "fieldtype": "Data",
+   "label": "Publisher"
+  },
+  {
+   "fieldname": "author",
+   "fieldtype": "Link",
+   "label": "Author",
+   "options": "Author"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "default": "Available",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nIssued\nAvailable"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "fieldname": "column_break_rpsj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "web_page_settings_tab",
+   "fieldtype": "Tab Break",
+   "label": "Web Page Settings"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
+  },
+  {
+   "fieldname": "isbn",
+   "fieldtype": "Data",
+   "label": "ISBN",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "author.full_name",
+   "fieldname": "author_name",
+   "fieldtype": "Data",
+   "label": "Author Name"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_no_of_articles_available",
+   "fieldtype": "Int",
+   "label": "Total No of Articles Available"
+  },
+  {
+   "default": "0",
+   "fieldname": "issued_articles",
+   "fieldtype": "Int",
+   "label": "Issued Articles"
+  }
+ ],
+ "has_web_view": 1,
+ "image_field": "image",
+ "index_web_pages_for_search": 1,
+ "is_published_field": "published",
+ "links": [],
+ "modified": "2024-05-29 17:18:08.495250",
+ "modified_by": "Administrator",
+ "module": "lms",
+ "name": "Article",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Librarian",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "article",
+ "search_fields": "article_name",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
